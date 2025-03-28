@@ -16,6 +16,13 @@ export class AppComponent {
     this.READ_tarefas();
   }
 
+  DELETE_tarefa(tarefaAserRemovida: Tarefa) {
+    this.arrayDeTarefas.splice(
+      this.arrayDeTarefas.indexOf(tarefaAserRemovida),
+      1
+    );
+  }
+
   CREATE_tarefa(descricaoNovaTarefa: string) {
     var novaTarefa = new Tarefa(descricaoNovaTarefa, false);
     this.arrayDeTarefas.unshift(novaTarefa);
@@ -23,9 +30,9 @@ export class AppComponent {
 
   READ_tarefas() {
     this.arrayDeTarefas = [
-      new Tarefa("Estudar Frameworks", false),
-      new Tarefa("Comer Pizza", false),
-      new Tarefa("Ajudar meus pais", false),
+      new Tarefa('Estudar Frameworks', false),
+      new Tarefa('Comer Pizza', false),
+      new Tarefa('Ajudar meus pais', false),
     ];
   }
 }
