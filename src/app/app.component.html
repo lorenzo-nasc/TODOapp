@@ -6,7 +6,7 @@
   </button>
   <ul>
     <li *ngFor="let tarefaDoLoop of arrayDeTarefas">
-      <app-item></app-item>
+      <app-item [tarefa]="tarefaDoLoop"></app-item>
     </li>
   </ul>
 </div>
