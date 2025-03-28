@@ -12,7 +12,7 @@ export class AppComponent {
 
   arrayDeTarefas: Tarefa[] = [];
 
-  constructo() {
+  constructor() {
     this.READ_tarefas();
   }
 
@@ -23,9 +23,9 @@ export class AppComponent {
 
   READ_tarefas() {
     this.arrayDeTarefas = [
-      new Tarefa('Estudar Frameworks', false),
-      new Tarefa('Comer Pizza', false),
-      new Tarefa('Ajudar meus pais', false),
+      new Tarefa("Estudar Frameworks", false),
+      new Tarefa("Comer Pizza", false),
+      new Tarefa("Ajudar meus pais", false),
     ];
   }
 }
